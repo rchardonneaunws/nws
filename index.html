@@ -50,6 +50,23 @@
             width: 100%;
             bottom: 0;
         }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px 20px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #003f7f;
+        }
     </style>
     <!-- Matomo Tag Manager -->
 <script>
@@ -96,9 +113,19 @@
         <p>La cuisine de Rouen est un mélange de traditions normandes, avec des plats à base de fruits de mer, de cidre et de fromages. Ne manquez pas le fameux "canelé", un petit gâteau typique, ainsi que le "coq au cidre".</p>
     </section>
 
+    <section>
+        <a href="#" class="cta-button" id="goal-button">Cliquez ici pour découvrir plus</a>
+    </section>
+
     <footer>
         <p>&copy; 2024 La Ville de Rouen. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        document.getElementById('goal-button').addEventListener('click', function() {
+            _mtm.push({'event': 'goalButtonClicked'});
+        });
+    </script>
 
 </body>
 </html>
